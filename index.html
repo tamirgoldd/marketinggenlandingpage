@@ -155,6 +155,12 @@
                         </div>
 
                         <form id="leadForm" class="space-y-4">
+                            <!-- Hidden Fields for UTM Tracking -->
+                            <input type="hidden" name="utm_source" id="utm_source" value="">
+                            <input type="hidden" name="utm_medium" id="utm_medium" value="">
+                            <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+                            <input type="hidden" name="utm_term" id="utm_term" value="">
+
                             <!-- Name -->
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 uppercase mb-1 tracking-wider">Full Name</label>
@@ -247,9 +253,20 @@
         const form = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
         const successMessage = document.getElementById('successMessage');
-
-        // UPDATED WEBHOOK URL
         const WEBHOOK_URL = 'https://hook.eu1.make.com/ga3sohceinkwj1vufdcmu0drhv5lovxk'; 
+
+        // 1. AUTO-FILL UTM PARAMETERS
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'];
+            
+            utmFields.forEach(field => {
+                if(urlParams.has(field)) {
+                    const value = urlParams.get(field);
+                    document.getElementById(field).value = value;
+                }
+            });
+        });
 
         function resetForm() {
             form.reset();
@@ -259,48 +276,35 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // 1. UI Feedback: Loading State
             const originalBtnText = submitBtn.innerText;
             submitBtn.innerText = 'Processing...';
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
-            // 2. Gather Data
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
-            // Add metadata
             data.submittedAt = new Date().toISOString();
-            data.source = 'LP_Plaintiff_Partnership_V1';
-            data.referrer = document.referrer;
+            data.referrer = document.referrer; // Still capturing referrer as fallback
 
             try {
-                // 3. Send to Make.com
-                // We use 'no-cors' as a fallback if CORS is strict, but standard fetch is preferred for JSON.
                 await fetch(WEBHOOK_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
                 
-                // Simulate network delay for demo feel
                 await new Promise(resolve => setTimeout(resolve, 500));
-
-                // 4. Success State & Event Tracking
                 successMessage.classList.remove('hidden');
 
-                // TRACK FACEBOOK LEAD EVENT
                 if (window.fbq) {
                     fbq('track', 'Lead');
                 }
 
             } catch (error) {
                 console.error('Error:', error);
-                // Even if fetch fails due to CORS in some browsers, we might want to show success if it's a "opaque" response issue.
-                // For now, let's assume if it errors out completely, we alert.
                 alert('There was an error connecting to the server. Please check your internet connection and try again.');
             } finally {
-                // Reset Button
                 submitBtn.innerText = originalBtnText;
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
