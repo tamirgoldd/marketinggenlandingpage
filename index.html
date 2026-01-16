@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darrow | Strategic Plaintiff Partnership</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darrow: {
+                            dark: '#0B0B1E',
+                            purple: '#6D28D9',
+                            light: '#F3F4F6',
+                            accent: '#8B5CF6'
+                        }
+                    },
+                    animation: {
+                        blob: "blob 7s infinite",
+                        fade: "fadeIn 0.5s ease-in-out"
+                    },
+                    keyframes: {
+                        blob: {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" }
+                        },
+                        fadeIn: {
+                            "0%": { opacity: "0" },
+                            "100%": { opacity: "1" }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Glassmorphism for the Form */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased selection:bg-purple-200 selection:text-purple-900">
+
+    <!-- NAVIGATION -->
+    <nav class="w-full py-4 px-6 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <!-- Logo Removed per request, just text remains -->
+                <span class="font-bold text-2xl tracking-tight text-darrow-dark">DARROW</span>
+            </div>
+            <div class="hidden md:flex items-center gap-4 text-sm font-medium text-gray-600">
+                <span>Trusted by 80+ Leading Firms</span>
+                <span class="h-4 w-px bg-gray-300"></span>
+                <span>$22B+ Litigation Value Surfaced</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-darrow-dark overflow-hidden min-h-[90vh] flex items-center">
+        <!-- Abstract Background Effects -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-indigo-600/30 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10 w-full">
+            <div class="flex flex-col lg:flex-row items-center gap-12 xl:gap-20">
+                
+                <!-- LEFT CONTENT -->
+                <div class="flex-1 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-xs font-semibold text-purple-300 border border-purple-500/30 uppercase tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                        For Plaintiff Firms & Litigation Partners
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+                        Stop Chasing Ad-Hoc Cases.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300">Build a Strategic Pipeline.</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Move beyond transactional case buying. <strong>Partner with Darrow</strong> to co-develop custom litigation strategies and build an exclusive, reliable engine for high-merit matters.
+                    </p>
+                    
+                    <!-- Value Props List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left pt-4">
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 bg-purple-900/50 rounded text-purple-400 mt-1">
+                                <!-- Cog icon for Custom/Build -->
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Custom Development</h4>
+                                <p class="text-sm text-gray-400">We train our AI on your specific thesis to detect unique violations.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 bg-purple-900/50 rounded text-purple-400 mt-1">
+                                <!-- Handshake icon for Partnership -->
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Exclusive Partnership</h4>
+                                <p class="text-sm text-gray-400">Collaborate with our legal experts to define and dominate your niche.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT FORM (Glassmorphism) -->
+                <div class="w-full max-w-md lg:w-[480px]">
+                    <div class="glass-panel rounded-2xl shadow-2xl p-8 relative overflow-hidden">
+                        <!-- Success Overlay (Hidden by default) -->
+                        <div id="successMessage" class="hidden absolute inset-0 bg-white z-20 flex flex-col items-center justify-center text-center p-8 animate-fade">
+                            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Inquiry Received</h3>
+                            <p class="text-gray-600 mb-6">Our partnerships team is reviewing your firm's profile. We will be in touch shortly to discuss alignment.</p>
+                            <button onclick="resetForm()" class="text-darrow-purple font-semibold hover:underline">Submit another inquiry</button>
+                        </div>
+
+                        <div class="text-center mb-6">
+                            <h3 class="text-xl font-bold text-gray-900">Discuss Strategic Partnership</h3>
+                            <p class="text-sm text-gray-500 mt-1">Connect with our team to explore custom development.</p>
+                        </div>
+
+                        <form id="leadForm" class="space-y-4">
+                            <!-- Name -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase mb-1 tracking-wider">Full Name</label>
+                                <input type="text" name="name" required 
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition duration-200 placeholder-gray-400"
+                                    placeholder="Jane Doe">
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase mb-1 tracking-wider">Work Email</label>
+                                <input type="email" name="email" required 
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition duration-200 placeholder-gray-400"
+                                    placeholder="jane@lawfirm.com">
+                            </div>
+
+                            <!-- Firm -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase mb-1 tracking-wider">Firm Name</label>
+                                <input type="text" name="company" required 
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition duration-200 placeholder-gray-400"
+                                    placeholder="Doe & Partners LLP">
+                            </div>
+
+                            <!-- Practice Area -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase mb-1 tracking-wider">Target Practice Area</label>
+                                <div class="relative">
+                                    <select name="practice_area" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition duration-200 appearance-none cursor-pointer">
+                                        <option value="" disabled selected>Select area for development...</option>
+                                        <option value="Class Action">Class Action</option>
+                                        <option value="Mass Tort">Mass Tort</option>
+                                        <option value="Environmental">Environmental</option>
+                                        <option value="Consumer Protection">Consumer Protection</option>
+                                        <option value="Labor & Employment">Labor & Employment</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="w-full bg-darrow-purple hover:bg-purple-700 text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-0.5 mt-4">
+                                Start the Conversation
+                            </button>
+                        </form>
+                        
+                        <div class="mt-6 flex items-center justify-center gap-2 text-xs text-gray-400">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                            <span>Strictly confidential partnership discussion.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS STRIP -->
+    <section class="bg-white py-12 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
+                <div class="space-y-1">
+                    <div class="text-3xl md:text-4xl font-extrabold text-darrow-dark">$22B+</div>
+                    <div class="text-xs md:text-sm font-semibold text-gray-500 uppercase tracking-widest">Litigation Value Surfaced</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-3xl md:text-4xl font-extrabold text-darrow-dark">5M+</div>
+                    <div class="text-xs md:text-sm font-semibold text-gray-500 uppercase tracking-widest">Data Points Scanned/Mo</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-3xl md:text-4xl font-extrabold text-darrow-dark">100%</div>
+                    <div class="text-xs md:text-sm font-semibold text-gray-500 uppercase tracking-widest">Fact-Checked Memos</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-3xl md:text-4xl font-extrabold text-darrow-dark">80+</div>
+                    <div class="text-xs md:text-sm font-semibold text-gray-500 uppercase tracking-widest">Partner Firms</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-50 py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 Darrow Inc. All rights reserved. | <a href="#" class="hover:text-purple-600">Privacy Policy</a></p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const form = document.getElementById('leadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+
+        // REPLACE THIS URL WITH YOUR MAKE.COM WEBHOOK URL
+        const WEBHOOK_URL = 'https://hook.us1.make.com/YOUR_WEBHOOK_ID_HERE'; 
+
+        function resetForm() {
+            form.reset();
+            successMessage.classList.add('hidden');
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // 1. UI Feedback: Loading State
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Processing...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            // 2. Gather Data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            // Add metadata
+            data.submittedAt = new Date().toISOString();
+            data.source = 'LP_Plaintiff_Partnership_V1';
+            data.referrer = document.referrer;
+
+            try {
+                // 3. Send to Make.com (Commented out for demo, uncomment to use)
+                /* await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                */
+                
+                // Simulate network delay for demo feel
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                // 4. Success State
+                successMessage.classList.remove('hidden');
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error connecting to the server. Please check your internet connection and try again.');
+            } finally {
+                // Reset Button
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }
+        });
+    </script>
+</body>
+</html>
