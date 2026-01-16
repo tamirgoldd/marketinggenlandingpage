@@ -248,7 +248,7 @@
         const submitBtn = document.getElementById('submitBtn');
         const successMessage = document.getElementById('successMessage');
 
-        // REPLACE THIS URL WITH YOUR MAKE.COM WEBHOOK URL
+        // UPDATED WEBHOOK URL
         const WEBHOOK_URL = 'https://hook.eu1.make.com/ga3sohceinkwj1vufdcmu0drhv5lovxk'; 
 
         function resetForm() {
@@ -275,16 +275,16 @@
             data.referrer = document.referrer;
 
             try {
-                // 3. Send to Make.com (Commented out for demo, uncomment to use)
-                /* await fetch(WEBHOOK_URL, {
+                // 3. Send to Make.com
+                // We use 'no-cors' as a fallback if CORS is strict, but standard fetch is preferred for JSON.
+                await fetch(WEBHOOK_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
-                */
                 
                 // Simulate network delay for demo feel
-                await new Promise(resolve => setTimeout(resolve, 1000));
+                await new Promise(resolve => setTimeout(resolve, 500));
 
                 // 4. Success State & Event Tracking
                 successMessage.classList.remove('hidden');
@@ -296,6 +296,8 @@
 
             } catch (error) {
                 console.error('Error:', error);
+                // Even if fetch fails due to CORS in some browsers, we might want to show success if it's a "opaque" response issue.
+                // For now, let's assume if it errors out completely, we alert.
                 alert('There was an error connecting to the server. Please check your internet connection and try again.');
             } finally {
                 // Reset Button
